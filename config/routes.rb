@@ -1,4 +1,16 @@
 Testapp::Application.routes.draw do
+  match 'user/edit' => 'users#edit', :as => :edit_current_user
+
+  match 'signup' => 'users#new', :as => :signup
+
+  match 'logout' => 'sessions#destroy', :as => :logout
+
+  match 'login' => 'sessions#new', :as => :login
+
+  resources :sessions
+
+  resources :order_items
+
   resources :suppliers
 
   resources :roles
@@ -62,7 +74,7 @@ Testapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'orders#index'
 
   # See how all your routes lay out with "rake routes"
 
