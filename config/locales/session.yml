@@ -1,2 +1,4 @@
 it:
-    login_ok: "Login effettuato dall'utente"
+    login_ok: "Login eseguito dall'utente"
+    login_ko: "Login fallito. Nome utente o password non validi"
+    logout_ok: "Log out eseguito dall'utente"
